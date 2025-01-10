@@ -9,10 +9,12 @@ public class Main {
     }
     // method calculates the megabytes and remaining kilobytes from the kilobytes parameter.
     public static void printMegaBytesAndKiloBytes (int kiloBytes) {
+        // If the parameter kiloBytes is less than 0 then print the text "Invalid Value".
         if (kiloBytes < 0) {
             System.out.println("Invalid Value");
-            return;
+            return; // ends the program
         }
+        // if the parameter kiloBytes is not less then 0,
         int megaBytes = kiloBytes / 1024;
         int remainingKB = kiloBytes % 1024;
         System.out.println(kiloBytes + " KB = " + megaBytes + " MB and " + remainingKB + " KB");
